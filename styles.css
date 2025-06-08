@@ -1,0 +1,810 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#cubing{
+    text-decoration: underline ; 
+    position: absolute;
+    left: 45%; 
+    border-radius: 10px;
+} 
+
+#cubing:hover{
+    animation: rgbColor 5s infinite ease-in-out;
+} 
+
+.algs_imgs{
+    width: 300px;
+    height: 300px;
+    color: white;
+}
+
+@keyframes rgbColor {
+    0%   { rotate: 1080deg;}
+
+    33% {scale: 4;
+    background-color: #181616; 
+    border: 3px solid white;
+    box-shadow: 0px 0px 30px black;
+    padding: 10px;}
+
+    66% { scale: 4;
+    background-color: #181616; 
+    border: 3px solid white;
+    box-shadow: 0px 0px 30px black;
+    padding: 10px;
+    rotate: 0deg;}
+
+    100% {scale: 1;}
+
+}
+
+@keyframes logoRotating{
+    to{
+        rotate: 360deg;
+    }
+}
+
+
+
+#logo{
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+
+#logo:hover{
+    animation: logoRotating 3s infinite linear;
+}
+
+main, .second_page{
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: #181616;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 70px;
+}
+
+
+
+/* Para la scrollbar */
+::-webkit-scrollbar {
+    width: 10px;  
+}
+
+::-webkit-scrollbar-thumb{
+    /* box-shadow: inset 0px 0px 4px rgb(0, 0, 0); */
+    background-color: azure;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    /* box-shadow: inset 0px 0px 4px rgb(0, 0, 0, 0.9); */
+    background-color: rgb(240, 255, 255, 0.6);
+
+}
+
+::-webkit-scrollbar-track{
+    /* box-shadow: inset 0px 0px 4px rgb(0, 0, 0); */
+    background-color: rgb(88, 86, 86);
+}
+
+
+
+a{
+    background-color: transparent; 
+    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    border: 0px transparent solid;
+    cursor: pointer;
+}
+
+/* Para los botónes */
+.azure_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    background-color: azure;
+    transition: 
+    color 0.5s,
+    scale 0.5s,
+    background-color 0.5s,
+    box-shadow 0.5s;
+}
+
+.azure_buttons:hover{
+    background-color: rgba(240, 255, 255, 0.9);
+    box-shadow: 0px 0px 4px black;
+    scale: 1.025; 
+}
+
+.azure_buttons > span{
+    font-weight: 500;
+    text-align: center;
+    color: black;
+}
+
+.azure_buttons:hover > span{
+    color: rgba(0, 0, 0, 0.9);  
+}
+
+
+
+
+
+
+h1,p,h2,h3{
+    color: white;
+    font-weight: 500;
+}
+
+/* Nav */
+nav{
+    width: 100vw;
+    height: 70px;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 100;
+    position: fixed;
+    box-shadow: 0px 0px 3px 0px black;
+}
+
+#first_button_nav{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    transition: 
+    scale 2s;
+}
+
+#first_button_nav:hover{
+    scale: 5;
+}
+
+#nav_to_center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1460px;
+    margin: auto;
+}
+
+.nav_right{
+    display: flex;
+    align-items: center;
+}
+
+.buttons_nav, #last_button_nav{
+    color: white;
+    margin-right: 61px;
+    font-size: 40px;
+    transition: 
+    color 0.5s;
+}
+
+#last_button_nav{
+    margin-right: 0px;
+    padding: 13px 0px;
+} 
+
+.buttons_nav:hover, #last_button_nav:hover{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.dropdown_algs{
+    display: inline-block;
+    margin-right: 0px;
+    margin-right: 30px;
+}
+
+.dropdown_algs:hover > .hidden_nav_algs{
+    display: flex;
+}
+
+.hidden_nav_algs{
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 70px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    box-shadow: 0px 0px 3px 0px black;
+}
+
+.hidden_nav_algs:hover{
+    display: flex;
+}
+
+.hidden_algs_categorys{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 5px solid azure;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 1px 0px black;
+    transition: 
+    scale 0.5s,
+    box-shadow 0.5s;
+    margin: 0px 10px;
+}
+
+.hidden_algs_categorys:hover{
+    box-shadow: 0px 0px 4px 0px black;
+    scale: 1.006;
+}
+
+.hidden_algs_categorys_main_text{
+    font-size: 60px;
+}
+
+.hidden_algs_sections{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.hidden_algs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    border: 5px solid azure;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0px 0px 1px 0px black;
+    margin: 10px;
+    transition: 
+    scale 0.5s,
+    box-shadow 0.5s;
+}
+
+.hidden_algs:hover{
+    box-shadow: 0px 0px 4px 0px black;
+    scale: 1.006;
+}
+
+
+.hidden_algs > a{
+    color: white;
+    font-size: 30px;
+    transition: 
+    color 0.5s;
+}
+
+.hidden_algs > a:hover{
+    color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 0px 0px black;
+
+}
+
+.hidden_algs > h2{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer{
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+}
+
+footer > a{
+    font-size: 30px;
+    color: white;
+    transition: 
+    color 0.5s;
+}
+
+footer > a:hover{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+h6{
+    color: white;
+}
+
+
+
+
+
+
+/* Para las págians principales */
+.main_pages{
+    padding-bottom: 40px;
+}
+
+
+
+/* 1ra página */
+.first_page{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 70px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+
+/* Para la parte derecha */
+.f_p_right{
+    padding-top: 29px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Para los textos principales */
+#f_p_main_texts{
+    padding-bottom: 45px;
+    width: 950px;
+}
+
+#f_p_main_text{
+    font-size: 95px;
+    font-weight: 400;
+    padding-bottom: 22px;
+}
+
+h3{
+    font-size: 36px;
+    font-weight: 400;
+}
+
+/* Para los botones de abajo */
+.f_p_squares{
+    width: 960px;
+    height: 138px;
+    margin-bottom: 10px;
+}
+
+.f_p_squares_text{
+    font-size: 56px;
+}
+
+
+
+/* Para la parte izquierda */
+.f_p_left{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+/* Para el "sidebar" */
+aside{
+    padding-top: 20px;
+}
+
+.f_p_squares_sidebar{
+    width: 244px;
+    height: 190px;
+    margin-bottom: 10px;
+}
+
+.f_p_squares_sidebar_text{
+    font-size: 40px;
+}
+
+
+
+/* 2da página */
+.second_page, .third_page{
+    padding-bottom: 40px;
+} 
+
+/* Para el texto principal de la 2da página */
+.s_p_main_texts, .t_p_main_texts{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.s_p_main_text, .t_p_main_text{
+    font-size: 96px;
+    text-align: center;
+}
+
+/* Para los cuadrados del F2L */
+.s_p_f2l{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Para cada sección */
+.s_p_f2l_sections, .t_p_ll_sections{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid white;
+    border-radius: 20px;
+    padding: 30px;
+    height: 670px;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1px 0px black;
+    transition: 
+    scale 0.5s,
+    box-shadow 0.5s;
+}
+
+.s_p_f2l_sections:hover, .t_p_ll_sections:hover{
+    scale: 1.006;
+    box-shadow: 0px 0px 4px black;
+}
+
+/* Para las imgs */
+.s_p_f2l_imgs, .t_p_ll_imgs{
+    width: 254px;
+    height: 254px;
+    border: 3px solid azure;
+    border-radius: 10px;
+}
+
+/* Para la descripción */
+.s_p_f2l_descriptions, .t_p_ll_descriptions{
+    width: 380px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s_p_f2l_descriptions_texts, .t_p_ll_descriptions_texts{
+    text-align: center;
+    font-weight: 400;
+    font-size: 42px;
+}
+
+/* Para las de "Ver los casos" */
+.s_p_f2l_cases_squares, .t_p_ll_cases_squares{
+    width: 232px;
+    height: 176px;
+}
+
+.s_p_f2l_cases_squares_texts, .t_p_ll_cases_squares_texts{
+    font-size: 50px;
+}
+
+
+
+/* 3ra página */
+.t_p_ll{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+
+
+
+/* Para la pestaña de 3x3 */
+
+/* Para la parte de CFOP */
+#cfop{
+    padding-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#cfop_main_text{
+    padding-top: 43px;
+    font-size: 96px;
+    padding-bottom: 14px;
+
+}
+
+#all_cfop_squares{
+    display: flex;
+
+}
+
+.cfop_squares{
+    width: 240px;
+    height: 240px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.cfop_squares_text{
+    color: black;
+    font-size: 50px;
+}
+
+  
+
+
+#others_t_t{
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 112px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.others_t_t_main_texts{
+    font-size: 64px;
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.all_others_t_t_squares{
+    display: flex;
+}
+
+.others_t_t_squares{
+    width: 170px;
+    height: 170px;
+    margin-left: 8px;
+    margin-right: 8px; 
+}
+
+.others_t_t_squares_texts{
+    font-size: 36px;
+    color: black;
+}
+
+
+
+/* Para el F2L, OLL, PLL, ZBLL, CLL, EG-1, EG-2, etc... */
+
+
+#top{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cases_main_text{
+    font-size: 96px;
+    text-align: center;
+    transition: 
+    color 0.5s;
+
+}
+
+.cases_main_text:hover{
+    color: rgb(255, 255, 255, 0.7);
+    cursor: default;
+}
+
+
+.cases{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.cases > article{
+    border: 3px solid white;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 
+    scale 0.5s,
+    box-shadow 0.5s;
+}
+
+.cases > article:hover{
+    scale: 1.006;
+    box-shadow: 0px 0px 4px black;
+}
+
+#cases_center{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#cases_center > article{
+    border: 3px solid white;
+    border-radius: 20px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 
+    scale 0.5s,
+    box-shadow 0.5s;
+}
+
+#cases_center > article:hover{
+    scale: 1.006;
+    box-shadow: 0px 0px 4px black;
+}
+
+
+.img_and_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.case_description{
+    font-size: 96px;
+    font-weight: 400;
+}
+
+.alg_square{
+    width: 665px;
+    height: 60px;
+    background-color: transparent;
+    border-top: 2px white solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.alg{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.alg_button{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 
+    color 0.5s;
+}
+
+.border_left_alg_square{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid white;
+    padding-left: 17px;
+}
+
+.alg_button:hover{
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.cases_main_text_extra_information{
+    display: none; 
+    position: absolute;
+    z-index: 1;
+    background-color: #181616;
+    top: 166px;
+    width: 500px;
+    max-height: 600px;
+    overflow: auto;
+    border: solid azure 3px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.cases_main_text_extra_information::-webkit-scrollbar-thumb{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.cases_main_text_extra_information::-webkit-scrollbar-track{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.top_text:hover .cases_main_text_extra_information{
+    display: block;
+}
+
+.cases_main_text_extra_information_text{
+    padding: 30px;
+    font-size: 40px;
+}
+
+
+
+/* Para las partes donde solo hay 1 video */
+#only_one_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#only_one_video_video{
+    border-radius: 20px;
+} 
+
+
+/* Para los links */
+.link{
+    text-decoration: underline;
+    color: blue;
+    transition: all 0s;
+}
+
+.link:hover{
+    scale: 1;
+    background-color: transparent;
+    color: rgba(0, 0, 255, 0.7)
+}
+
+
+
+
+/* NOTAS, HACER DENTRO DEL DIV TOP, U NUEVO DIV, Y QUE USE MENOS, ESPACIO, PORQUE SI YO PASO POR ENCIMA DEL TOP, CUAL ABARCA MUCHO ESPACIO, SE ABRE SIN NECESIDAD DE PONERSE ENCIMA DEL TEXTO, ENTONCES, HAY QUE HACER UN DIVE QU MIDA LO QUE EL TXTO MIDA, Y ASÍ QUE FUNCIONE BIEN */
+
+.in_development{
+    padding-top: 140px;
+    text-align: center;
+    font-size: 100px;
+}
+
+
+#credits{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#credits_inside{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 72vw;
+}
+
+#credits_main_text{
+    font-size: 60px;
+}
+
+#credits_inside > p{
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    overflow: auto;
+}
