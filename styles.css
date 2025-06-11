@@ -808,3 +808,47 @@ aside{
     flex-direction: column;
     overflow: auto;
 }
+
+@media print {
+    body {
+        background: white;
+        color: black;
+        margin: 10mm 15mm; /* márgenes arriba/abajo y lados */
+    }
+    .cases_main_text_extra_information{
+        display: none;
+    }
+
+    nav, footer{
+        display: none;
+    }
+
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .cases > article, #cases_center > article{
+        border: 3px solid black;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        background-color: transparent;
+    }
+
+    .alg_square{
+        border-top: 2px black solid;
+    }
+
+    .border_left_alg_square{
+        border-left: 3px solid black;
+    }
+
+    .case_description, .alg{
+        color: black;
+    }
+
+    #credits_inside > p{
+        color: black;
+    }
+
+}
