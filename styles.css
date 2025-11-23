@@ -10,6 +10,10 @@
     background-color: white;
 }
 
+#cubing{
+    text-decoration: underline;
+}
+
 /* #cubing{
     text-decoration: underline; 
     position: absolute;
@@ -117,7 +121,7 @@ a{
     cursor: pointer;
 }
 
-/* Para los botónes */
+/* Para los botones */
 .azure_buttons{
     display: flex;
     justify-content: center;
@@ -461,6 +465,7 @@ aside{
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 112px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -726,6 +731,7 @@ aside{
         width: 30px;
         height: 20px;
         transition: 0.3s ease;
+        cursor: pointer;
     }
 
 
@@ -741,6 +747,7 @@ aside{
         align-items: flex-start;
         flex-direction: column;
         z-index: 10;
+        box-shadow: 0px 0px 3px 0px black;
 
     }
 
@@ -808,7 +815,6 @@ aside{
 
 /* Quitando aside */
 @media (max-width: 1300px){
-    aside{ display: none;}
     .first_page{
         justify-content: center;
     }
@@ -827,6 +833,7 @@ aside{
         border-radius: 50%;
         padding: 10px;
         z-index: 10000;
+        cursor: pointer;
     }
     
     aside{
@@ -835,10 +842,10 @@ aside{
         display: flex;
         top: 0;
         right: 0;
-        width: 300px;
+        width: 270px;
         height: 100vh;
-        background: #272727;
-        border: 1px solid white;
+        border-left: 1px solid azure;
+        background: rgb(24, 22, 22);
         padding: 20px 40px;
         flex-direction: column;
         justify-content: center;
@@ -847,6 +854,7 @@ aside{
         z-index: 10000;
         transition: 0.3s ease;
         gap: 10px;
+        box-shadow: 0 0 4px black;
     }
 
     
@@ -856,53 +864,29 @@ aside{
         font-size: 26px !important;
     }
 
-    /*
-    .aside-menu::before, .aside-menu::after {
-        content: ''; 
-        background: #fff; 
-        position: absolute; 
-        width: 70px;
-        height: 2px; 
-        transition: 0.3s ease;
-    }
-
     .aside-menu::before {
-        rotate: -45deg;
-        top: 0;
-    }
-
-    .aside-menu::after {
-        rotate: 45deg;
-        bottom: 0;
-    }
-        
-    */
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-top: 3px solid white;
+        border-right: 3px solid white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-90%, -50%) rotate(-135deg);
+        transition: 0.3s ease;
+}
 
     .aside-menu.aside_open {
-        transform: translateX(-280px);
+        transform: translateX(-250px);
         transition: 0.3s ease;
         margin-right: 20px;
     }
 
-    /*
     .aside-menu.aside_open::before {
-        transform: rotate(45deg);
-        top: 9px;
-        transition: 0.3s ease;
+        transform: translate(-144%, -50%) rotate(45deg);
     }
 
-    .aside-menu.aside_open::after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        transition: 0.3s ease;
-    }
-
-    .aside-menu.aside_open span {
-        transform: scale(0);
-        transition: 0.3s ease;
-    }
-
-    */
 
     aside.aside_open {
         transform: translateX(0px);
@@ -1045,6 +1029,10 @@ aside{
 
     .s_p_f2l_cases_squares_texts, .t_p_ll_cases_squares_texts{
         font-size: 42px;
+    }
+
+    #others_t_t{
+        margin-bottom: 30px;
     }
 }
 
@@ -1270,13 +1258,16 @@ aside{
     padding-top: 70px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 
 }
 
 #cfop_main_text{
     padding-top: 43px;
-    font-size: 70px;
+    font-size: 52px;
     padding-bottom: 14px;
+    word-break: break-word;
+    text-align: center;
 
 }
 
